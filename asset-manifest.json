@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/mreddy-fullstack/Training_Institute/static/css/main.34173172.css",
+    "main.js": "/mreddy-fullstack/Training_Institute/static/js/main.245c30b7.js",
+    "static/js/453.2beefe9f.chunk.js": "/mreddy-fullstack/Training_Institute/static/js/453.2beefe9f.chunk.js",
+    "static/media/institute_logo.jpeg": "/mreddy-fullstack/Training_Institute/static/media/institute_logo.db6dfb1c98114634c966.jpeg",
+    "index.html": "/mreddy-fullstack/Training_Institute/index.html",
+    "main.34173172.css.map": "/mreddy-fullstack/Training_Institute/static/css/main.34173172.css.map",
+    "main.245c30b7.js.map": "/mreddy-fullstack/Training_Institute/static/js/main.245c30b7.js.map",
+    "453.2beefe9f.chunk.js.map": "/mreddy-fullstack/Training_Institute/static/js/453.2beefe9f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.34173172.css",
+    "static/js/main.245c30b7.js"
+  ]
+}
