@@ -1,0 +1,45 @@
+.review-box-container {
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    gap: 10px;
+    border-radius: 20px;
+    height: 300px;
+    padding-top:75px;
+    padding-bottom: 50px;
+  }
+  h2{
+    color: gold;
+    text-align: center;
+  }
+  .review-box {
+    width: 300px;
+    padding: 10px;
+    /* background-color: darkgrey; */
+    color:burlywood;
+    border-radius: 10%;
+    flex: none;
+  }
+  .read-more {
+    cursor: pointer;
+    border: none;
+    background: none;
+    text-decoration: underline;
+    color: deeppink;
+    font-size: 16px;
+    /* font-weight: bold; */
+    /* Bold text for emphasis */
+}
+  
+  .review-box-container::-webkit-scrollbar {
+    display: none;
+  }
+  .review-box-container {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .review-box-container .name{
+    text-align: right;
+    color:red;
+  }
+  

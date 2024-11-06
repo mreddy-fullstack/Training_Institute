@@ -1,0 +1,103 @@
+.footer {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    height: 400px;
+}
+
+.map-section {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 30%;
+    /* Adjust the width as necessary */
+    height: 30%;
+    /* Match the height of the iframe */
+    z-index: 1;
+    /* Ensure the map is in the background */
+}
+.footer .map-section .map{
+    padding-top: 5%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    /* Aligns links and contact details */
+    align-items: flex-start;
+    padding: 20px;
+    margin-left: 40%;
+    /* Space for the map */
+    position: relative;
+    z-index: 2;
+    /* Ensure content is on top of the map */
+}
+
+.links,
+.contact-details {
+    border-radius: 8px;
+    /* Rounded corners */
+    width: 45%;
+    /* Adjust as necessary */
+    text-align: left;
+}
+
+h4 {
+    margin-bottom: 10px;
+}
+
+.links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.links li {
+    margin: 5px 0;
+}
+
+.links a {
+    text-decoration: none;
+    color: rgb(118, 204, 68);
+}
+
+.links a:hover {
+    text-decoration: underline;
+    color: orange;
+}
+
+.contact-details p {
+    width: fit-content;
+    /* Space between lines */
+}
+
+.contact-details p a {
+    color: rgb(98, 211, 54);
+}
+
+.social-icons {
+    padding-top: 10%;
+    display: flex;
+    gap: 15px;
+    /* Space between icons */
+    margin-top: 10px;
+    /* Space above icons */
+}
+
+.social-icons a {
+    padding: 2%;
+    color: gold;
+    /* Icon color */
+    font-size: 27px;
+    /* Adjust size as needed */
+    display: flex;
+    /* Ensure the icons are aligned properly */
+    align-items: center;
+    /* Center the icons vertically */
+}
+
+.rights {
+    font-size: 14px;
+    color: orange;
+    margin-top: 0;
+    /* Space above rights text */
+}

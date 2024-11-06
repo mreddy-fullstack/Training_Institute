@@ -1,0 +1,21 @@
+.slider-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    position: relative;
+    height: 300px; /* Adjust height as needed */
+  }
+  
+  .slider-item {
+    min-width: 300px; /* Adjust width for each item */
+    margin: 10px;
+    padding: 20px;
+    background: #f0f0f0;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+  }
+  
+  .slider-item:hover {
+    transform: scale(1.05);
+  }
+  

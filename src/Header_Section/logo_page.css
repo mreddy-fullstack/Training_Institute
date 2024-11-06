@@ -1,0 +1,43 @@
+.container {
+    position: relative;
+    padding-top: 40px;
+    /* Space for the logo */
+}
+
+.App-logo {
+    position: absolute;
+    top: 11px;
+    /* Adjust based on your preference */
+    left: 15px;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.buttons {
+    text-align: center;
+    margin: 0;
+    /* Space above the buttons */
+}
+
+.buttons a {
+    margin: 0 10px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #186b6b;
+    color: rgb(118, 204, 68);
+    font-size: 18px;
+    cursor: pointer;
+}
+button:hover{
+    text-decoration: underline;
+    color: orange;
+}
+
+section {
+    margin: 30px 0;
+}

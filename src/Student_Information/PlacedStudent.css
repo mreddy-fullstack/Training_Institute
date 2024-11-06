@@ -1,0 +1,106 @@
+.placed-students-container {
+    display: flex;
+    overflow-x: auto;
+    cursor: grab;
+    scrollbar-width: none;
+    height: 400px;
+    padding-top: 50px;
+    /* Hide scrollbar for Firefox */
+}
+
+.placed-students-container::-webkit-scrollbar {
+    display: none;
+    /* Hide scrollbar for Chrome, Safari, and Opera */
+}
+
+.title {
+    text-align: center;
+}
+
+.cards-wrapper {
+    display: flex;
+    /* gap: 5px; */
+    /* Space between cards */
+}
+
+.card {
+    /* border: 1px solid #4ce68cf3; */
+    /* border-radius: 10px; */
+    padding: 20px; 
+    /* Padding for card content */
+    /* min-width: 220px; */
+    flex-shrink: 0;
+    width: 300px;
+    text-align: center;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.student-name {
+    font-size: 16px;
+    text-align: right;
+    /* Larger font for name */
+    margin: 20px;
+    /* Space around the name */
+    color: goldenrod;
+    /* Darker color for emphasis */
+}
+h3{
+    text-align: left;
+}
+.rating {
+    font-size: 1em;
+    /* Font size for rating */
+    color: #f39c12;
+    /* Color for rating to make it stand out */
+}
+
+.review-text {
+    font-size: 14px;
+    /* Font size for reviews */
+    text-align: left;
+    padding: 4px;
+    margin-top: 5px;
+    /* Add space above review text */
+}
+
+.image {
+    width: 125px;
+    /* Fixed width for image */
+    height: 125px;
+    /* Fixed height for image */
+    border-radius: 50%;
+    /* Circular image */
+    border: 2px solid #4ce68cf3;
+    object-fit: cover;
+    /* Maintain aspect ratio */
+    margin-bottom: 20%;
+    /* Space below the image */
+}
+
+.read-more {
+    color:black;
+    cursor: pointer;
+    border: none;
+    background: none;
+    text-decoration: underline;
+    font-size: 16px;
+    /* font-weight: bold; */
+    /* Bold text for emphasis */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .placed-students-container {
+        flex-direction: column;
+        /* Stack vertically on small screens */
+        align-items: center;
+        /* Center align cards */
+    }
+
+    .cards-wrapper {
+        flex-direction: column;
+    }
+}

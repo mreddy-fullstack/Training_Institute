@@ -1,0 +1,87 @@
+.Batch-Container {
+    max-width: 100%;
+    /* margin: 0 auto; */
+    padding-top: 20px;
+    background-color: #64c2b5; 
+    /* Lighter background */
+    border-radius: 8px;
+    /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); */
+  }
+  
+  .Batch-Container h2 {
+    text-align: center;
+    color: rgb(205, 238, 144);
+    font-family: 'Roboto', sans-serif; /* Example font */
+    /* font-size: 1.5rem; */
+  }
+  .Batch-Container .heading{
+    color: gold;
+  }
+  
+  .flex-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .meeting-section, .batches-section, .demo-section {
+    flex: 1;
+    /* margin: 10px; */
+    padding: 20px;
+    /* background-color: #fff; */
+    border-radius: 10px; /* More rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s; /* Animation */
+  }
+  
+  .demo-section, .batches-section{
+    text-align: center;
+  }
+  .meeting-section:hover, .batches-section:hover, .demo-section:hover {
+    transform: scale(1.1); /* Scale effect on hover */
+  }
+  
+  .meeting-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  .meeting-form label{
+    align-items: center;
+  }
+  input[type="text"], input[type="email"], input[type="datetime-local"] {
+    padding: 10px;
+    margin-top: 5px;
+    border: 3px;
+    width: 300px;
+    color:red;
+    border-radius: 4px;
+  }
+  
+  button {
+    padding: 10px;
+    margin-top: 10px;
+    /* background-color: #007bff; */
+    /* color: ; */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition */
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .batch {
+    margin: 10px 0;
+    padding: 10px;
+    /* background-color: #e9ecef; */
+    /* color: white; */
+    border-radius: 4px;
+  }
+  
