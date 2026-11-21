@@ -1,87 +1,150 @@
 .Batch-Container {
-    max-width: 100%;
-    /* margin: 0 auto; */
-    padding-top: 20px;
-    background-color: #64c2b5; 
-    /* Lighter background */
-    border-radius: 8px;
-    /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); */
-  }
-  
-  .Batch-Container h2 {
-    text-align: center;
-    color: rgb(205, 238, 144);
-    font-family: 'Roboto', sans-serif; /* Example font */
-    /* font-size: 1.5rem; */
-  }
-  .Batch-Container .heading{
-    color: gold;
-  }
-  
+  padding: 36px;
+  border: 1px solid var(--color-border);
+  border-radius: 18px;
+  background: #f7faf9;
+}
+
+.Batch-Container h2 {
+  color: var(--color-ink);
+  text-align: left;
+}
+
+.Batch-Container .heading {
+  margin: 0 0 26px;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  letter-spacing: -0.04em;
+}
+
+.flex-container {
+  display: grid;
+  grid-template-columns: 1.2fr 0.9fr 0.9fr;
+  gap: 18px;
+}
+
+.meeting-section,
+.batches-section,
+.demo-section {
+  min-width: 0;
+  padding: 24px;
+  border: 1px solid var(--color-border);
+  border-radius: 13px;
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card);
+}
+
+.meeting-section h2,
+.batches-section h2,
+.demo-section h2 {
+  margin: 0 0 18px;
+  font-size: 1.08rem;
+}
+
+.meeting-form {
+  display: grid;
+  gap: 14px;
+}
+
+.meeting-form label {
+  display: grid;
+  gap: 7px;
+  color: var(--color-muted);
+  font-size: 0.84rem;
+  font-weight: 650;
+}
+
+.meeting-form input,
+.meeting-form select {
+  width: 100%;
+  min-height: 42px;
+  padding: 8px 10px;
+  border: 1px solid var(--color-border);
+  border-radius: 7px;
+  background: #fff;
+  color: var(--color-ink);
+}
+
+.meeting-form button,
+.demo-section button {
+  min-height: 44px;
+  padding: 0 16px;
+  border: 0;
+  border-radius: 7px;
+  background: var(--color-accent);
+  color: #fff;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background-color 160ms ease;
+}
+
+.meeting-form button:hover,
+.demo-section button:hover {
+  background: var(--color-accent-dark);
+}
+
+.batch {
+  margin-top: 12px;
+  padding: 16px;
+  border: 1px solid var(--color-border);
+  border-radius: 9px;
+  background: #fbfdfc;
+}
+
+.batch h3 {
+  margin: 0 0 9px;
+  color: var(--color-ink);
+  font-size: 1rem;
+}
+
+.batch p,
+.demo-section p {
+  margin: 7px 0;
+  color: var(--color-muted);
+  font-size: 0.87rem;
+  line-height: 1.6;
+}
+
+.demo-section .demo-link {
+  display: inline-flex;
+  width: 100%;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 12px;
+  padding: 0 16px;
+  border-radius: 7px;
+  background: var(--color-accent);
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 160ms ease;
+}
+
+.demo-section .demo-link:hover {
+  background: var(--color-accent-dark);
+}
+
+@media (max-width: 900px) {
   .flex-container {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
+    grid-template-columns: 1fr 1fr;
   }
-  
-  .meeting-section, .batches-section, .demo-section {
-    flex: 1;
-    /* margin: 10px; */
-    padding: 20px;
-    /* background-color: #fff; */
-    border-radius: 10px; /* More rounded corners */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s; /* Animation */
+
+  .meeting-section {
+    grid-column: 1 / -1;
   }
-  
-  .demo-section, .batches-section{
-    text-align: center;
+}
+
+@media (max-width: 600px) {
+  .Batch-Container {
+    padding: 22px;
   }
-  .meeting-section:hover, .batches-section:hover, .demo-section:hover {
-    transform: scale(1.1); /* Scale effect on hover */
+
+  .flex-container {
+    grid-template-columns: 1fr;
   }
-  
-  .meeting-form {
-    display: flex;
-    flex-direction: column;
+
+  .meeting-section {
+    grid-column: auto;
   }
-  
-  label {
-    margin-bottom: 10px;
-    font-weight: bold;
-  }
-  .meeting-form label{
-    align-items: center;
-  }
-  input[type="text"], input[type="email"], input[type="datetime-local"] {
-    padding: 10px;
-    margin-top: 5px;
-    border: 3px;
-    width: 300px;
-    color:red;
-    border-radius: 4px;
-  }
-  
-  button {
-    padding: 10px;
-    margin-top: 10px;
-    /* background-color: #007bff; */
-    /* color: ; */
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s; /* Smooth transition */
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
-  .batch {
-    margin: 10px 0;
-    padding: 10px;
-    /* background-color: #e9ecef; */
-    /* color: white; */
-    border-radius: 4px;
-  }
-  
+}

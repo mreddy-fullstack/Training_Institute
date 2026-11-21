@@ -1,45 +1,67 @@
-.review-box-container {
-    display: flex;
-    overflow-x: scroll;
-    scroll-behavior: smooth;
-    gap: 10px;
-    border-radius: 20px;
-    height: 300px;
-    padding-top:75px;
-    padding-bottom: 50px;
-  }
-  h2{
-    color: gold;
-    text-align: center;
-  }
-  .review-box {
-    width: 300px;
-    padding: 10px;
-    /* background-color: darkgrey; */
-    color:burlywood;
-    border-radius: 10%;
-    flex: none;
-  }
-  .read-more {
-    cursor: pointer;
-    border: none;
-    background: none;
-    text-decoration: underline;
-    color: deeppink;
-    font-size: 16px;
-    /* font-weight: bold; */
-    /* Bold text for emphasis */
+.review-section-title {
+  margin: 0 0 18px;
+  color: var(--color-ink);
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  letter-spacing: -0.04em;
 }
-  
-  .review-box-container::-webkit-scrollbar {
-    display: none;
-  }
-  .review-box-container {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-  .review-box-container .name{
-    text-align: right;
-    color:red;
-  }
-  
+
+.review-box-container {
+  display: flex;
+  gap: 18px;
+  overflow-x: auto;
+  padding: 8px 2px 24px;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #bed6ce transparent;
+}
+
+.review-box-container .empty-state {
+  align-self: flex-start;
+  margin: 0;
+  padding: 18px 20px;
+  border: 1px dashed var(--color-border);
+  border-radius: 10px;
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}
+
+.review-box {
+  box-sizing: border-box;
+  width: 300px;
+  min-height: 190px;
+  flex: 0 0 300px;
+  padding: 22px;
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: var(--shadow-card);
+  color: var(--color-muted);
+}
+
+.review-box .review-text {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+.review-box > p:not(.review-text) {
+  margin: 14px 0 0;
+  font-size: 0.86rem;
+}
+
+.review-box .name {
+  color: var(--color-ink);
+  font-weight: 700;
+  text-align: right;
+}
+
+.read-more {
+  padding: 0 0 0 4px;
+  border: 0;
+  background: transparent;
+  color: var(--color-accent);
+  cursor: pointer;
+  font-size: 0.87rem;
+  font-weight: 650;
+  text-decoration: underline;
+}

@@ -31,26 +31,27 @@ const TrainerSubjects = () => {
 
   // Set up intersection observer
   useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return undefined;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         setIsVisible(entry.isIntersecting); // Trigger animation when component is in view
       },
       { threshold: 0.5 }
     );
-    if (containerRef.current) {
-      observer.observe(containerRef.current);
-    }
+    observer.observe(container);
     return () => {
-      if (containerRef.current) {
-        observer.unobserve(containerRef.current);
-      }
+      observer.unobserve(container);
     };
   }, []);
 
   useEffect(() => {
-    const timer = setTimeout(nextSlide, 5000); // Auto-slide every 5 seconds
+    const timer = setTimeout(() => {
+      setCurrentIndex((index) => (index + 1) % subjects.length);
+    }, 5000);
     return () => clearTimeout(timer);
-  }, [currentIndex]);
+  }, [currentIndex, subjects.length]);
 
   return (
     <div

@@ -52,7 +52,7 @@ const Footer = () => {
             </div>
 
             <div className="rights">
-                <p>&copy; 2024 Your Institute. All rights reserved.</p>
+                <p>&copy; {new Date().getFullYear()} Training Institute. All rights reserved.</p>
             </div>
         </footer>
     );

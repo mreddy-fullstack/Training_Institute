@@ -1,106 +1,89 @@
 .placed-students-container {
-    display: flex;
-    overflow-x: auto;
-    cursor: grab;
-    scrollbar-width: none;
-    height: 400px;
-    padding-top: 50px;
-    /* Hide scrollbar for Firefox */
+  overflow-x: auto;
+  padding: 16px 2px 24px;
+  cursor: grab;
+  scrollbar-width: thin;
+  scrollbar-color: #bed6ce transparent;
+}
+
+.placed-students-container:active {
+  cursor: grabbing;
 }
 
 .placed-students-container::-webkit-scrollbar {
-    display: none;
-    /* Hide scrollbar for Chrome, Safari, and Opera */
+  height: 7px;
+}
+
+.placed-students-container::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background: #bed6ce;
 }
 
 .title {
-    text-align: center;
+  margin: 0 0 18px;
+  color: var(--color-ink);
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  letter-spacing: -0.04em;
+  text-align: left;
 }
 
 .cards-wrapper {
-    display: flex;
-    /* gap: 5px; */
-    /* Space between cards */
+  display: flex;
+  gap: 18px;
+  width: max-content;
+}
+
+.empty-state {
+  margin: 0;
+  padding: 18px 20px;
+  border: 1px dashed var(--color-border);
+  border-radius: 10px;
+  color: var(--color-muted);
+  font-size: 0.9rem;
 }
 
 .card {
-    /* border: 1px solid #4ce68cf3; */
-    /* border-radius: 10px; */
-    padding: 20px; 
-    /* Padding for card content */
-    /* min-width: 220px; */
-    flex-shrink: 0;
-    width: 300px;
-    text-align: center;
+  box-sizing: border-box;
+  width: 250px;
+  flex-shrink: 0;
+  padding: 22px;
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: var(--shadow-card);
+  transition: transform 180ms ease;
 }
 
 .card:hover {
-    transform: scale(1.02);
+  transform: translateY(-4px);
 }
 
-.student-name {
-    font-size: 16px;
-    text-align: right;
-    /* Larger font for name */
-    margin: 20px;
-    /* Space around the name */
-    color: goldenrod;
-    /* Darker color for emphasis */
-}
-h3{
-    text-align: left;
-}
-.rating {
-    font-size: 1em;
-    /* Font size for rating */
-    color: #f39c12;
-    /* Color for rating to make it stand out */
+.card h3 {
+  margin: 8px 0;
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  text-align: left;
 }
 
-.review-text {
-    font-size: 14px;
-    /* Font size for reviews */
-    text-align: left;
-    padding: 4px;
-    margin-top: 5px;
-    /* Add space above review text */
+.card .student-name {
+  margin: 18px 0 0;
+  color: var(--color-ink);
+  font-size: 1rem;
+  font-weight: 700;
 }
 
 .image {
-    width: 125px;
-    /* Fixed width for image */
-    height: 125px;
-    /* Fixed height for image */
-    border-radius: 50%;
-    /* Circular image */
-    border: 2px solid #4ce68cf3;
-    object-fit: cover;
-    /* Maintain aspect ratio */
-    margin-bottom: 20%;
-    /* Space below the image */
+  display: block;
+  width: 104px;
+  height: 104px;
+  margin: 0 auto 20px;
+  border: 3px solid #e1f0eb;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
-.read-more {
-    color:black;
-    cursor: pointer;
-    border: none;
-    background: none;
-    text-decoration: underline;
-    font-size: 16px;
-    /* font-weight: bold; */
-    /* Bold text for emphasis */
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .placed-students-container {
-        flex-direction: column;
-        /* Stack vertically on small screens */
-        align-items: center;
-        /* Center align cards */
-    }
-
-    .cards-wrapper {
-        flex-direction: column;
-    }
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    transition: none;
+  }
 }

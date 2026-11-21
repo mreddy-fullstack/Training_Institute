@@ -23,8 +23,11 @@ const ReviewsScroll = () => {
     }, []);
 
     return (
-        <div>  <h2 >Student's Review</h2>
+        <div>  <h2 className="review-section-title">Student stories</h2>
             <div className="review-box-container">
+                {reviews.length === 0 && (
+                    <p className="empty-state">Student reviews will appear here soon.</p>
+                )}
                 {reviews.map((item, index) => (
                     <div key={index} className="review-box">
                         <p className="review-text">

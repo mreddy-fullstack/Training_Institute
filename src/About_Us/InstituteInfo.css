@@ -1,37 +1,54 @@
-/* Container setup */
 .instituteInfo-container {
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(32px, 7vw, 88px);
 }
 
-/* Left-side image styling */
+.instituteInfo-image {
+  display: grid;
+  overflow: hidden;
+  min-height: 330px;
+  place-items: center;
+  border-radius: 18px;
+  background: #e6efec;
+  box-shadow: var(--shadow-card);
+}
+
 .instituteInfo-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
+  display: block;
+  width: min(100%, 400px);
+  height: auto;
+  border-radius: 12px;
+  object-fit: contain;
 }
 
-/* Right-side content styling */
 .instituteInfo-content {
-    margin-left: 60px; /* Increased space between image and content */
-    color: rgb(238, 236, 236);
-    font-family: Arial, sans-serif;
-    padding: 20px;
-    width: 100%;
+  max-width: 560px;
+  color: var(--color-muted);
 }
 
-/* Title and paragraph styling */
 .instituteInfo-content h2 {
-    margin: 0 0 10px;
-    font-size: 1.5em;
+  margin: 0 0 20px;
+  color: var(--color-ink);
+  font-size: clamp(1.9rem, 3vw, 2.6rem);
+  letter-spacing: -0.04em;
+  line-height: 1.15;
 }
 
 .instituteInfo-content p {
-    margin: 10px 0;
-    font-size: 1em;
-    line-height: 1.5;
+  margin: 0 0 14px;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+@media (max-width: 700px) {
+  .instituteInfo-container {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .instituteInfo-image {
+    min-height: 250px;
+  }
 }

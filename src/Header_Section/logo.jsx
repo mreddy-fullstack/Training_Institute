@@ -3,32 +3,20 @@ import logo from '../Institute_releated_Images/institute_logo.jpeg';
 import './logo_page.css';
 
 const Logo_Page = () => {
-    return (
-        <div className="container">
-            <div id='App-logo'>
-                <img src={logo} className="App-logo" alt="Institute Logo" />
-            </div>
-            <div className="buttons">
-                <a href="#about"><button>About Us</button></a>
-                <a href="#contact"><button>Contact Us</button></a>
-                <a href="#services"><button>Services</button></a>
-                <a href="#courses"><button>Courses</button></a>
-            </div>
-
-            <section id="about">
-
-            </section>
-            <section id="contact">
-
-            </section>
-            <section id="services">
-
-            </section>
-            <section id="courses">
-
-            </section>
-        </div>
-    );
+  return (
+    <header className="site-header">
+      <a className="brand" href="#top" aria-label="Training Institute home">
+        <img src={logo} className="App-logo" alt="" />
+        <span className="brand-name">Training Institute</span>
+      </a>
+      <nav className="site-navigation" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#services">Programs</a>
+        <a href="#courses">Upcoming batches</a>
+        <a className="navigation-cta" href="#contact">Contact us</a>
+      </nav>
+    </header>
+  );
 };
 
 export default Logo_Page;

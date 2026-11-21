@@ -15,8 +15,8 @@ const Batch_List = () => {
   });
 
   const batches = [
-    { id: 1, name: 'Batch One', time: '10:00 AM - 12:00 PM', date: 'November 1, 2024' },
-    { id: 2, name: 'Batch Two', time: '5:00 PM - 7:00 PM', date: 'November 5, 2024' },
+    { id: 1, name: 'Weekday batch', time: 'Morning and afternoon options', date: 'Enrollment open' },
+    { id: 2, name: 'Weekend batch', time: 'Weekend schedule', date: 'Ask about the next intake' },
   ];
 
   const timeSlots = [
@@ -117,9 +117,9 @@ const Batch_List = () => {
         <div className="demo-section">
           <h2>Upcoming Demo Sessions</h2>
           <p>Join us to learn more about the course!</p>
-          <p>Date: <strong>November 10, 2024</strong></p>
-          <p>Time: <strong>3:00 PM - 4:00 PM</strong></p>
-          <button>Join Morning Demo</button>
+          <p>Date: <strong>Contact us for the next session</strong></p>
+          <p>Time: <strong>Flexible session options</strong></p>
+          <a className="demo-link" href="#contact">Ask about a demo</a>
         </div>
       </div>
     </div>

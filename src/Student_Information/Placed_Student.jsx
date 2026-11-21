@@ -3,7 +3,6 @@ import './PlacedStudent.css';
 
 const PlacedStudents = () => {
     const [data, setData] = useState([]);
-    const [expandedIndex, setExpandedIndex] = useState(null);
     const scrollRef = useRef(null);
     const isDragging = useRef(false);
     const startX = useRef(0);
@@ -26,10 +25,6 @@ const PlacedStudents = () => {
 
     const convertBlobToImage = (blobData) => {
         return `data:image/jpeg;base64,${blobData}`;
-    };
-
-    const handleToggleExpand = (index) => {
-        setExpandedIndex(expandedIndex === index ? null : index);
     };
 
     const handleMouseDown = (e) => {
@@ -55,7 +50,7 @@ const PlacedStudents = () => {
     };
 
     return (
-        <div><h2 className='title'>Our receently placed students</h2>
+        <div><h2 className='title'>Recently placed students</h2>
             <div
                 className="placed-students-container"
                 ref={scrollRef}
@@ -65,7 +60,10 @@ const PlacedStudents = () => {
                 onMouseMove={handleMouseMove}
             >
                 <div className="cards-wrapper">
-                    {data.map((item, index) => (
+                    {data.length === 0 && (
+                        <p className="empty-state">Placement stories will appear here soon.</p>
+                    )}
+                    {data.map((item) => (
                         <div className="card" key={item.id}>
                             <img src={convertBlobToImage(item.image)} alt={item.name} className="image" />
                            <h3>Role : </h3>

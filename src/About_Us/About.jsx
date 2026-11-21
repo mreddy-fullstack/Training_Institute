@@ -1,13 +1,14 @@
 import React from 'react';
 import './InstituteInfo.css';
+import instituteLogo from '../Institute_releated_Images/institute_logo.jpeg';
 
 function InstituteInfo() {
     return (
         <div className="instituteInfo-container">
             <div className="instituteInfo-image">
                 <img 
-                    src="https://iceacademy.co.in/super_admin/user_img/18830.jpg" 
-                    alt="Training Institute" 
+                    src={instituteLogo}
+                    alt="FCS Training Institute logo"
                 />
             </div>
             <div className="instituteInfo-content">
